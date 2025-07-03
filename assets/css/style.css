@@ -7,10 +7,11 @@
 
 body {
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 header {
-    height: 6.25rem;
+    height: 100px;
     background-color: #000;
 }
 
@@ -31,6 +32,7 @@ header {
     width: 80px;
     height: 80px;
     background-color: #b28756;
+    border-radius: 40px;
 }
 
 .menu {
@@ -53,14 +55,177 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     height: 100px;
     align-items: center;
     border-bottom: 5px solid transparent;
 }
 
-.menu li a:hover {
+.menu li a:hover,
+.menu .active a {
     border-bottom: 5px solid #b28756;
+    color: #ccc;
+}
+
+.banner {
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.banner .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.banner .slide {
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner .slide-area {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner h1 span {
+    color: #b28756;
+}
+
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.banner a {
+    display: inline-block;
+    background-color: #b28756;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 35px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.banner .sliders-pointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .pointer {
+    height: 15px;
+    width: 15px;
+    border: 2px solid #b28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.banner .pointer.active {
+    background-color: #b28756;
+}
+
+.default {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.default .section-tittle,
+.default .section-desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.default .section-tittle {
+    font-size: 25px;
+}
+
+.default .section-desc {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.section-body {
+    margin: auto;
+    max-width: 1540px;
+}
+
+.default.light {
+    background-color: #f7f7f7;
+}
+
+.default.light .section-tittle,
+.default.light .section-body {
+    color: #000;
+}
+
+.default.dark {
+    background-color: #000;
+}
+
+.default.dark .section-tittle,
+.default.dark .section-body {
+    color: white;
+}
+
+/*CSS DE ÁREAS ESPECÍFICAS*/
+
+.section-aboutus {
+    display: flex;
+}
+
+.section-aboutus--left {
+    flex: 1;
+}
+
+.section-aboutus--rigth {
+    width: 520px;
+    text-align: center;
+}
+
+.section-aboutus--rigth img {
+    width: 480px;
+    box-shadow: 0px 5px 20px black;
+}
+
+.button {
+    display: inline-block;
+    background-color: #b28756;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 35px;
+    margin-top: 20px;
+    border-radius: 20px;
 }
